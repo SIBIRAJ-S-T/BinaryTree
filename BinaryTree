@@ -162,35 +162,3 @@ class BinaryTree:
         
         return self.is_balanced(node.left) and self.is_balanced(node.right)
 
-
-# Driver Code to Test
-bt = BinaryTree()
-bt.insert(1)
-bt.insert(2)
-bt.insert(3)
-bt.insert(4)
-bt.insert(5)
-bt.insert(6)
-bt.insert(7)
-
-print("Inorder Traversal:", end=" ")
-bt.inorder(bt.root)
-print("\nPreorder Traversal:", end=" ")
-bt.preorder(bt.root)
-print("\nPostorder Traversal:", end=" ")
-bt.postorder(bt.root)
-print("\nLevel Order Traversal:", end=" ")
-bt.level_order()
-
-print("\nHeight of Tree:", bt.height(bt.root))
-print("Total Nodes:", bt.count_nodes(bt.root))
-print("Leaf Nodes:", bt.count_leaf_nodes(bt.root))
-print("Diameter of Tree:", bt.diameter(bt.root))
-print("Is Tree Balanced?", bt.is_balanced(bt.root))
-
-print("\nSearching for 4:", bt.search(4))  # True
-print("Searching for 10:", bt.search(10))  # False
-
-bt.delete(3)
-print("\nLevel Order Traversal after Deleting 3:", end=" ")
-bt.level_order()
